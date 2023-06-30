@@ -1,0 +1,85 @@
+<div class="card" *ngFor="let item of productsArray">
+    <img [src]="item.image" alt="Denim Jeans" style="width:100%">
+    <h1>{{item .productname
+        }}</h1>
+    <p class="price">${{item.price}}</p>
+    <p>{{item.description}}</p>
+    <p>{{item.seriesnumber}}</p>
+    <p><button (click)="productbuy(item._id)" role="button" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">Enter Details
+        </button></p>
+
+    <!-- <button type="button" class="button-41" role="button" data-bs-toggle="modal"
+    data-bs-target="#staticBackdrop">
+    Add Products -->
+
+</div>
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Enter Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form [formGroup]="addressform" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="firstnameInput">First Name</label>
+                        <input type="text" id="firstnameInput" formControlName="firstname"
+                            class="form-control custom-input">
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="lastnameInput">Last Name</label>
+                        <input type="text" id="lastnameInput" formControlName="lastname"
+                            class="form-control custom-input">
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="addressInput">Address</label>
+                        <input type="text" id="addressInput" formControlName="addresss"
+                            class="form-control custom-input">
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="cityInput">City</label>
+                        <input type="text" id="cityInput" formControlName="city" class="form-control custom-input">
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="stateInput">State</label>
+                        <input type="text" id="stateInput" formControlName="state" class="form-control custom-input">
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="pincodeInput">Pincode</label>
+                        <input type="text" id="pincodeInput" formControlName="pincode"
+                            class="form-control custom-input">
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="hidden" id="userIDInput" formControlName="userID" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="hidden" id="productIDInput" formControlName="productID" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-foot">
+                    <button type="submit" class="button-76" role="button" data-bs-dismiss="modal"
+                        [disabled]="addressform.invalid" (click)="purchage()">Buy Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

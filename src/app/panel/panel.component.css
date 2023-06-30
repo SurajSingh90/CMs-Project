@@ -1,0 +1,88 @@
+.admin-panel {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f0f0f0;
+  height: 100vh;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.menu-item {
+  padding: 10px;
+}
+
+.menu-item a {
+  color: #000;
+  text-decoration: none;
+}
+
+.menu-item.dropdown ul {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item.dropdown:hover ul {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.dropdown-toggle::after {
+  /* content: "\25BC"; */
+  margin-left: 5px;
+}
+
+/* .content {
+    flex-grow: 1;
+    padding: 20px;
+  } */
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  text-align: center;
+  background: #dcdcdc;
+  height: 70px;
+  display: flex;
+  align-items: center;
+
+  justify-content: flex-end;
+}
+
+h2 {
+  color: #333;
+}
+
+.buttons {
+  margin-top: 0px;
+  float: right;
+}
+
+.login-button,
+.register-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(100, 100, 100);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.register-button {
+  margin-left: 10px; /* Add left margin to the register button */
+}
+.login-button:hover,
+.register-button:hover {
+  /* background-color: #0056b3; */
+  /* color: rgb(217, 255, 217); */
+}
